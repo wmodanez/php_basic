@@ -8,5 +8,5 @@ function fatorial($numero)
     }
 }
 
-echo fatorial(3)."<br>\n";
-echo fatorial(4)."<br>\n";
+echo fatorial(3) . "<br>\n";
+echo fatorial(4) . "<br>\n";
