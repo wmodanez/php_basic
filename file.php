@@ -14,7 +14,7 @@ while (!feof($fd)) {
 fclose($fd);
 
 //Write
-$fp = fopen("file.txt", "w");
+$fp = fopen('file.txt', 'w');
 fwrite($fp, 'linha 1' . PHP_EOL);
 fwrite($fp, 'linha 2' . PHP_EOL);
 fwrite($fp, 'linha 3' . PHP_EOL);
@@ -23,12 +23,12 @@ fwrite($fp, 'linha 5' . PHP_EOL);
 fclose($fp);
 
 //Contents
-echo file_put_contents("file.txt", "este é o conteúdo do arquivo\nque será usado para teste.\n");
+echo file_put_contents('file.txt', "este é o conteúdo do arquivo\nque será usado para teste.\n");
 echo "\n";
-echo file_get_contents("file.txt");
+echo file_get_contents('file.txt');
 
 //Read to array
-$arquivo = "file.txt";
+$arquivo = 'file.txt';
 $file = file($arquivo);
 
 foreach ($file as $linha) {
@@ -36,8 +36,8 @@ foreach ($file as $linha) {
 }
 
 //Copy
-$origem = "file.txt";
-$destino = "file2.txt";
+$origem = 'file.txt';
+$destino = 'file2.txt';
 
 if (copy($origem, $destino)) {
     echo "Cópia feita com sucesso!\n";
