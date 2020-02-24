@@ -1,7 +1,7 @@
 <?php
 
 
-class ContaCorrente extends Conta
+final class ContaCorrente extends Conta
 {
     protected $limite;
 

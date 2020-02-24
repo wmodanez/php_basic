@@ -1,7 +1,7 @@
 <?php
 
 
-class Conta
+abstract class Conta
 {
     protected $agencia;
     protected $conta;
