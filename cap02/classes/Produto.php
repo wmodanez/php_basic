@@ -1,7 +1,7 @@
 <?php
 
 
-class Produto
+class Produto implements InterfaceOrcavel
 {
     private $descricao;
     private $estoque;
