@@ -7,9 +7,9 @@ $database = 'livro';
 
 $mysql = new mysqli($servername, $username, $password, $database);
 //Solução do problema de caracteres especiais no ambiente Windows.
-$mysql -> set_charset("utf8");
+$mysql->set_charset("utf8");
 
-if($mysql->connect_error){
+if ($mysql->connect_error) {
     die("Falha na conexão: {$mysql->connect_error}");
 }
 echo 'Conexão efetuada com sucesso';
