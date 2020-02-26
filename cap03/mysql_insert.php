@@ -6,6 +6,7 @@ $password = '123456';
 $database = 'livro';
 
 $mysql = new mysqli($servername, $username, $password, $database);
+//Solução do problema de caracteres especiais no ambiente Windows.
 $mysql -> set_charset("utf8");
 
 if($mysql->connect_error){
