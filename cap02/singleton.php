@@ -2,7 +2,7 @@
 
 require_once 'classes/Preferencias.php';
 
-$preferencias= Preferencias::getInstance();
+$preferencias = Preferencias::getInstance();
 print "A linguagem é: {$preferencias->getData('language')}\n";
 
 $preferencias->setData('language', 'pt');

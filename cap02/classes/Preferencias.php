@@ -19,7 +19,7 @@ class Preferencias
      */
     public static function getInstance()
     {
-        if(empty(self::$instance)){
+        if (empty(self::$instance)) {
             self::$instance = new self();
         }
         return self::$instance;
@@ -41,11 +41,12 @@ class Preferencias
         $this->data[$key] = $data;
     }
 
-    public function save(){
+    public function save()
+    {
         $string = '';
-        if($this->data){
+        if ($this->data) {
             foreach ($this->data as $key => $value) {
-                $string .="{$key} = \"{$value}\" \n";
+                $string .= "{$key} = \"{$value}\" \n";
             }
         }
         file_put_contents('application.ini', $string);
