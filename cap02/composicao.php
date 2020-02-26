@@ -1,5 +1,6 @@
 <?php
 
+require_once 'classes/InterfaceOrcavel.php';
 require_once 'classes/Produto.php';
 require_once 'classes/Caracteristicas.php';
 
