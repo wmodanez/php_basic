@@ -1,9 +1,5 @@
 <?php
 
-/*TODO
-verificar o motivo pelo qual ao criar ou alterar a solução esta gravando os dados em branco e gerando erro na tela
-PHP Notice:  Undefined index
-*/
 header('Access-Control-Allow-Origin', '*');
 header('Access-Control-Allow-Headers', '*');
 
