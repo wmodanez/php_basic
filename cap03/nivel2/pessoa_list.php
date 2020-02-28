@@ -55,7 +55,7 @@
             $id_cidade = $row['id_cidade'];
 
             print '<tr>';
-            print "<td aling='center'> <a href='pessoa_form_edit.php?action=edit&txtCodigo={$id}'><i class='fa fa-edit fa-2x'></i></a></td>";
+            print "<td aling='center'> <a href='pessoa_form.php?action=edit&txtCodigo={$id}'><i class='fa fa-edit fa-2x'></i></a></td>";
             print "<td aling='center'> <a href='pessoa_list.php?action=delete&txtCodigo={$id}'><i class='fa fa-minus-circle fa-2x' style='color: red'></i></a></td>";
             print "<td> {$id} </td>";
             print "<td> {$nome}</td>";
