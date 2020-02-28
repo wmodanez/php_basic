@@ -10,10 +10,6 @@
 $id = $nome = $endereco = $bairro = $telefone = $email = $id_cidade = '';
 
 if (!empty($_REQUEST['action'])) {
-//    if ($_POST['txtCodigo'] == '' or $_POST['txtNome'] == '' or $_POST['txtEndereco'] == '' or $_POST['txtBairro'] == ''
-//        or $_POST['txtTelefone'] == '' or $_POST['txtEmail'] == '' or $_POST['id_cidade'] == '') {
-//        print 'Os campos não podem estar vazios';
-//    } else {
     $servername = 'localhost';
     $username = 'livro';
     $password = '123456';
@@ -23,7 +19,7 @@ if (!empty($_REQUEST['action'])) {
     $mysql->set_charset("utf8");
 
     if ($_REQUEST['action'] == 'edit') {
-        $id = (int)$_GET['id'];
+        $id = (int)$_GET['txtCodigo'];
         $sql = "SELECT * FROM pessoa WHERE id= '{$id}'";
         $result = mysqli_query($mysql, $sql);
         $row = mysqli_fetch_assoc($result);
@@ -45,7 +41,7 @@ if (!empty($_REQUEST['action'])) {
         $email = $_POST['txtEmail'];
         $id_cidade = $_POST['id_cidade'];
 
-        if (empty($_POST['id'])) {
+        if (empty($_POST['txtCodigo'])) {
             $sql = "INSERT INTO pessoa (nome, endereco, bairro, telefone, email, id_cidade)
                             VALUES ('{$nome}', '{$endereco}', '{$bairro}',
                                     '{$telefone}', '{$email}', '{$id_cidade}')";
@@ -59,7 +55,6 @@ if (!empty($_REQUEST['action'])) {
         print ($result) ? 'Registro salvo com sucesso.' : mysqli_error($mysql);
         mysqli_close($mysql);
     }
-//    }
 }
 ?>
 <body>
@@ -113,7 +108,7 @@ if (!empty($_REQUEST['action'])) {
                 <div class="col-md-4">
                     <select id="id_cidade" name="id_cidade" class="form-control">
                         <?php
-                        require_once 'lista_combo_cidades.php';
+                        require_once '../lista_combo_cidades.php';
                         print lista_combo_cidades($id_cidade);
                         ?>
                     </select>
@@ -141,9 +136,9 @@ if (!empty($_REQUEST['action'])) {
             <div class="form-group">
                 <div class=" col-md-8">
                     <button id="btnSalvar" name="btnSalvar" class="btn btn-primary" type="submit">Salvar</button>
-<!--                    <button id="btnVoltar" name="btnVoltar" class="btn btn-dark"-->
-<!--                            onclick="window.location='pessoa_list.php'">Voltar-->
-<!--                    </button>-->
+                    <!--                    <button id="btnVoltar" name="btnVoltar" class="btn btn-dark"-->
+                    <!--                            onclick="window.location='pessoa_list.php'">Voltar-->
+                    <!--                    </button>-->
                 </div>
             </div>
         </fieldset>
