@@ -12,7 +12,7 @@ $mysql = new mysqli($servername, $username, $password, $database);
 $mysql->set_charset("utf8");
 
 if (!empty($_GET['action']) and $_GET['action'] == 'delete') {
-    $id = (int)$_GET['txtCodigo'];
+    $id = (int)$_GET['id'];
     $sql = "DELETE FROM pessoa WHERE id = '{$id}'";
     $result = mysqli_query($mysql, $sql);
 }
