@@ -11,7 +11,7 @@
 
 <div class="col-md-10">
     <fieldset class="hidden-print form-group">
-        <legend>Visitantes</legend>
+        <legend>Pessoas</legend>
         <?php
 
         $servername = 'localhost';
